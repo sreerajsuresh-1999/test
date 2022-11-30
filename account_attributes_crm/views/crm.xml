@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_crm_attributes_form" model="ir.ui.view">
+        <field name="name">Attributes on Leads</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/group[1]" position="after">
+                <group>
+                    <field name="attribute1" groups="account_attributes.attribute1_user"/>
+                    <field name="attribute2" groups="account_attributes.attribute2_user"/>
+                    <field name="attribute3" groups="account_attributes.attribute3_user"/>
+                </group>
+             </xpath>
+        </field>
+    </record>
+
+    <record id="view_crm_revenue_spread_attributes_tree" model="ir.ui.view">
+        <field name="name">crm.revenue.spread.attribute.tree</field>
+        <field name="model">crm.revenue.spread</field>
+        <field name="inherit_id" ref="crm_revenue_spread.crm_revenue_spread_tree_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='user']" position="after">
+                <field name="attribute1" groups="account_attributes.attribute1_user"/>
+                <field name="attribute2" groups="account_attributes.attribute2_user"/>
+                <field name="attribute3" groups="account_attributes.attribute3_user"/>
+             </xpath>
+        </field>
+    </record>
+
+</odoo>

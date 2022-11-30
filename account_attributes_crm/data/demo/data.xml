@@ -1,0 +1,9 @@
+<odoo>
+    <!-- Create stub data for test-framework -->
+
+        <!-- Lead/Opportunity -->
+        <record id="crm_lead_test_demo" model="crm.lead">
+            <field name="name">Acount Attribute</field>
+            <field name="type">lead</field>
+        </record>
+</odoo>
